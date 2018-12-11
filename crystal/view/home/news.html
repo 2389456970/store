@@ -1,0 +1,49 @@
+<div class="top">
+			<div class="title wow 
+			bounceIn">
+				<h4>国内旅行</h4>
+				<h5>DOMESTIC TRAVEL</h5></div>
+			<ul class="menu ">
+			<?php foreach($new_menu as $v) { ?>
+				<li <?php echo $pid == $v['id'] ? 'class="current"':''; ?>><a href="index.php?m=home&ctl=news&cate_id=<?php echo $v['id'] ?>#tit"><?php echo $v['name'] ?></a></li>
+			<?php } ?>
+			</ul>
+		</div>
+
+		<h2 class="title" id="tit"><?php echo $cate_tit['name']; ?></h2>
+		<ul class="location">
+			<li>当前位置：</li>
+			<li><a href="index.html">首页</a><font>&gt;</font></li>
+			<li class="current"><a href="news.html">国内旅行</a></li>		
+		</ul>
+		<ul class="news_main">
+		<?php foreach($news as $vo){ ?>
+			<li>
+				<a href="javascript:;" class="news_pic wow bounceInLeft"><img style="width: 349px;height: 183px;" src="<?php echo UPLOAD.$vo['image1'];?>"></a>
+				<div class="date wow bounceInUp">
+					<p>
+						<?php echo date("d",$vo['time']); ?>
+					</p>
+					<font>
+						<?php echo date("Y/m",$vo['time']); ?>
+					</font>
+				</div>
+				<div class="text wow wobble">
+					<h4 class="title"><a href="javascript:;"><?php echo $vo['title'];?></a></h4>
+				<p><?php echo htmlspecialchars_decode($vo['content']);?></p>
+				</div>
+				<a href="javascript:;" class="details">查看详情</a>
+			</li>
+			<?php } ?>
+		</ul>
+		<ul class="page">
+			<li class="pre" >
+				<a href="index.php?m=home&ctl=<?php echo $ctl?>&page=<?php echo $prev ?>#tit"><img src="<?php echo HOME ?>images/news_page_left.png"></a>
+			</li>
+			<?php for($i=1;$i<$page_total+1;$i++){ ?>
+				<li <?php echo $i == $page ? 'class="current"' : '';?>><a href="index.php?m=home&ctl=<?php echo $ctl?>&page=<?php echo $i ?>#tit"><?php echo $i ?></a></li>
+			<?php } ?>
+			<li class="next">
+				<a href="index.php?m=home&ctl=<?php echo $ctl?>&page=<?php echo $next ?>#tit"><img src="<?php echo HOME ?>images/news_page_right.png"></a>
+			</li>
+		</ul>

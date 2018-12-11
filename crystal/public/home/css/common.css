@@ -1,0 +1,32 @@
+@charset "utf-8";
+*{vertical-align:top;}
+a,a:focus{text-decoration: none;outline:none;blr:expression(this.onFocus=this.blur());}
+input,button,input:focus,button:focus{outline:none;hide-focus: expression(this.hideFocus=true);}
+button::-moz-focus-inner, input[type="reset"]::-moz-focus-inner, input[type="button"]::-moz-focus-inner, input[type="submit"]::-moz-focus-inner, input[type="file"] > input[type="button"]::-moz-focus-inner {
+border:none; }
+textarea{ height:auto; vertical-align:top; outline:none;resize:none;border:1px solid #888888;overflow:hidden;}
+ul{list-style-type:none}
+body,div,a,ul,li,h3,h4,h5,h6,h1,h2,p,dl,dt,dd,textarea,input{margin:0px;padding:0px;}
+a{text-decoration:none;}
+img{border:0px;}
+.header{width:1200px; margin:0px auto;}
+.header:after{ content:""; width:100%; height:0px; font-size:0px; display:block; clear:both;}
+.header .logo{margin:40px 0px 31px 21px; float:left;}
+.header .nav{float:right; margin-top:60px; margin-right:132px;}
+.header .nav li{float:left; margin-left:34px;}
+.header .nav li a{display:block; font-family:"微软雅黑"; font-size:16px; color:#333333; line-height:38px; width:96px;
+border-radius:6px; text-align:center;behavior:url(PIE.htc); z-index: 1 !important;}
+.header .nav li:hover a{background:#ffc23e; color:white;}
+.header .nav li.current a{background:#ffc23e; color:white;}
+.banner{max-width: 100%; min-width: 1200px;}
+.banner img{display: block; max-width: 100%; min-width: 1200px;}
+.footer{background:#333333; padding:30px 0px; }
+.footer .nav{ border:white; border-width:3px; margin:0px auto}
+.footer .nav:after{ content:""; width:100%; height:0px; font-size:0px; display:block; clear:both;}
+.footer .nav li{float:left; border-right:2px solid #fff;}
+.footer .nav li a{display:block; font-family:"微软雅黑"; font-size:16px; color:#FFF; width:106px; line-height:16px; text-align:center;}
+.footer .tel{margin:22px auto;}
+.footer .tel:after{content:""; width:100%; height:0px; font-size:0px; display:block; clear:both;}
+.footer .tel li{ font-family:"微软雅黑"; font-size:16px; color:#FFF; float:left; border-right:2px solid #fff; line-height:16px; padding:0px 37px;}
+.footer p{ font-size:14px; color:#FFF; font-weight:normal; text-align:center; line-height:14px; font-family:"微软雅黑";}
+

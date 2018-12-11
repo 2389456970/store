@@ -1,0 +1,101 @@
+
+		<div class="about">
+			<div class="title  wow bounceInLeft">
+				<h4>公司介绍</h4>
+				<h5>COMPANY&nbsp;INTRODUCTION</h5>
+			</div>
+			<div class="text  wow bounceInDown">
+				<h6>SY国际高端私人旅游定制有限公司:</h6>
+
+					<p><?php echo htmlspecialchars_decode($about['content']);?></p>
+				<a href="index.php?m=home&ctl=about#tit" class="details">查看详情</a>
+
+			</div><img src="<?php echo UPLOAD.$about['image1'];?>" width="600px" height="300px" class="about_pic wow bounceInUp">
+		</div>
+		<div class="news">
+			<div class="main">
+				<div class="title  wow bounceInRight">
+					<h4>国内旅游</h4>
+					<h5>DOMESTIC TRAVEL</h5>
+				</div>
+				<ul class="news_list wow fadeInDown">
+				<?php foreach($news as $v) { ?>
+					<li>
+						<h4 class="" style="margin:15px 0 25px;text-align: center;"><a style="color: #333;font-weight: bolder;" href="index.php?m=home&ctl=news#tit"><?php echo $v['title'] ?></a></h4>
+						<div class="text">
+							<p><?php echo htmlspecialchars_decode($v['content']) ?></p>
+							<a href="index.php?m=home&ctl=news#tit" class="details">查看详情</a>
+						</div>
+						<a href="index.php?m=home&ctl=news#tit" class="news_pic"><img style="width: 213px; height:168px;position: relative;top: 18px;" src="<?php echo UPLOAD.$v['image1'];?>"></a>
+						
+					</li>
+				<?php } ?>	
+				</ul>
+			</div>
+		</div>
+		<div class="product">
+			<div class="title wow flipInY">
+				<h4>国外旅游</h4>
+				<h5>OVERSEAS TRAVEL</h5>
+			</div>
+			<ul class="pro_list wow fadeInUpBig">
+				<?php foreach($product as $vo){ ?>
+					<li>
+						<a href="index.php?m=home&ctl=product#tit"><img style="width: 330px;height: 237px;" src="<?php echo UPLOAD.$vo['image'];?>"></a>
+						<h5 class="title"><a href="index.php?m=home&ctl=product#tit"><?php echo $vo['title'];?></a></h5>
+						<p><?php echo htmlspecialchars_decode($vo['content']);?></p>
+						<a href="index.php?m=home&ctl=product#tit" class="details">查看详情</a>
+					</li>
+				<?php } ?>
+			</ul>
+		</div>
+		<div class="contact">
+			<div class="main">
+				<div class="title wow flip">
+					<h4>联系我们</h4>
+					<h5>CONTACT US</h5>
+				</div>
+				<div class="left wow bounceInLeft">
+					<ul class="tel">
+					<?php foreach($contact as $c) { ?>
+						<li>
+							<img src="<?php echo HOME ?>images/tel_03.jpg">
+							<font><?php echo $c['address'];?></font>
+						</li>
+						<li>
+							<img src="<?php echo HOME ?>images/tel_06.jpg">
+							<font><?php echo $c['telephone'];?></font>
+						</li>
+						<li>
+							<img src="<?php echo HOME ?>images/tel_08.jpg">
+							<font><?php echo $c['e-mail'];?></font>
+						</li>
+					<?php } ?>
+					</ul>
+				</div>
+				<form class="right wow bounceInRight" action="index.php?m=home&ctl=contact&act=feedbackpost" method="post" enctype="ultipart/form-data">
+					<ul>
+						<li>
+							<input type="text" name="name" value="姓名：" onfocus="if(this.value == '姓名：'){this.value = '';this.style.color='#333333';}" onblur="if(this.value == ''){this.value = '姓名：';style.color='#333333';}">
+						</li>
+						<li>
+							<input type="text" name="mobile" value="电话：" onfocus="if(this.value == '电话：'){this.value = '';this.style.color='#333333';}" onblur="if(this.value == ''){this.value = '电话：';style.color='#333333';}">
+						</li>
+						<li>
+							<input type="text" name="e-mail" value="邮箱：" onfocus="if(this.value == '邮箱：'){this.value = '';this.style.color='#333333';}" onblur="if(this.value == ''){this.value = '邮箱：';style.color='#333333';}">
+						</li>
+					</ul>
+					<div class="textarea_box">
+						<span></span>
+						<textarea name="message" onfocus="if(this.value == '留言'){this.value = '';this.style.color='#333333';}" onblur="if(this.value == ''){this.value = '留言';style.color='#6e6655';}">留言</textarea>
+					</div>
+
+					<input type="submit" value="提交">
+				</form>
+			</div>
+		</div>
+		<!-- <script>
+			function fun(){
+			    document.getElementById("text").value = "";
+			}
+		</script> -->

@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>
+			<?php echo $title ?>
+		</title>
+		<link rel="stylesheet" type="text/css" href="<?php echo HOME ?>css/common.css">
+		<link rel="stylesheet" type="text/css" href="<?php echo HOME ?>css/<?php echo $ctl ?>.css">
+		<link rel="stylesheet" type="text/css" href="<?php echo HOME ?>css/animate.css">
+		<link rel="shortcut icon" href="<?php echo UPLOAD.$logo[0]['image']; ?>" type="image/x-icon">
+	
+	</head>
+	<body>
+		<div class="header">
+			<a href="index.html" class="logo"><img src="<?php echo UPLOAD.$logo[0]['image']; ?>"></a>
+			<ul class="nav">
+				<?php foreach($menu as $v){ ?>
+				<li <?php echo ('ctl='.$ctl) == $v['url_path'] ? 'class="current"':''; ?>><a href="index.php?m=home&<?php echo $v['url_path'] ?>"><?php echo $v['name'] ?></a></li>
+				<?php } ?>
+			</ul>
+		</div>
+		<?php if($ctl == 'index'){ ?>
+		<div class="banner wow lightSpeedIn">
+			<ul class="banner_pic_list">
+			<?php foreach($pic as $p) { ?>
+				<li>
+					<a href="javascript:void(0)"><img src="<?php echo UPLOAD.$p['image1']; ?>"></a>
+				</li>
+				<li>
+					<a href="javascript:void(0)"><img src="<?php echo UPLOAD.$p['image2']; ?>"></a>
+				</li>
+				<li>
+					<a href="javascript:void(0)"><img src="<?php echo UPLOAD.$p['image3']; ?>"></a>
+				</li>
+			<?php } ?>
+			</ul>
+			<a href="javascript:void(0)" class="left"></a>
+			<a href="javascript:void(0)" class="right"></a>
+
+			<ul class="banner_list">
+				<li class="current"></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+		<?php }else{ ?>
+
+			<div class="banner">
+			<?php foreach($pic as $p) { ?>
+				<img src="<?php echo UPLOAD.$p['image1']; ?>">
+			<?php } ?>
+			</div>
+		<?php } ?>

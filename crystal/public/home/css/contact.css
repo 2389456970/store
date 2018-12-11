@@ -1,0 +1,24 @@
+@charset "utf-8";
+.map{ margin:40px auto; height:550px; display:block; width:1200px;}
+h2.title{margin: 58px auto 40px;text-align: center; font-family: "微软雅黑";font-size:24px; color:#333333; font-weight:normal;line-height:24px;}
+.location{width:1200px; margin:0px auto; padding-bottom:8px;  border-bottom: 2px solid #ffbb29;}
+.location:after{ content:""; width:100%; height:0px; font-size:0px; display:block; clear:both;}
+.location li{float:left; font-family: "微软雅黑";font-size:14px; color:#333333; line-height:14px;}
+.location li a{ float:left; font-family: "微软雅黑";font-size:14px; color:#333333;line-height:14px;}
+.location li.current a{color: #d59918;}
+.location li:hover a{color: #d59918;}
+.bottom {margin:64px auto 50px; width:1200px;}
+.bottom .tel li{font-family: "微软雅黑";font-size:14px; color:#333333; line-height:24px;}
+.bottom .tel{float:left; margin-left: 40px;}
+.bottom:after{ content:""; width:100%; height:0px; font-size:0px; display:block; clear:both;}
+.msg{float:right; margin-right:258px;}
+.msg li{margin-bottom:11px;}
+.msg li:after{ content:""; width:100%; height:0px; font-size:0px; display:block; clear:both;}
+.msg li label{ font-family: "微软雅黑";font-size:14px; color:#333333; line-height:24px; margin-right:6px; margin-left:8px; float:left;}
+.msg li input{border:1px solid #cccccc; padding-left:8px; font-family: "微软雅黑";font-size:14px; color:#333333; float:left;}
+.msg li input[type="text"]{width:182px; height:24px; line-height:24px;}
+.msg li textarea{border:1px solid #cccccc; width:248px; height:113px; padding-left:8px; padding-top:5px; font-family: "微软雅黑";font-size:14px; color:#333333; float:left;}
+.msg li a{float:left;}
+.msg li input[type="submit"],.msg li input[type="reset"]{font-family: "微软雅黑";font-size:18px; color:#333333; border:1px solid #d1d1d1; background:#fff; padding:0px 13px; cursor:pointer; line-height:28px; float:left;}
+.msg li input[type="submit"]:hover,.msg li input[type="reset"]:hover{background:#a7c0e0; color:#fff; border-color:#a7c0e0;}
+.msg li input[type="submit"]{margin-right:5px;}

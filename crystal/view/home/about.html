@@ -1,0 +1,24 @@
+<div class="top">
+			<div class="title wow tada">
+				<h4>公司介绍</h4>
+				<h5>COMPANY INTRODUCTION</h5></div>
+			<ul class="menu">
+			<?php foreach($about_menu as $v) { ?>
+				<li <?php echo $pid == $v['id'] ? 'class="current"':''; ?>><a href="index.php?m=home&ctl=about&cate_id=<?php echo $v['id'] ?>#tit"><?php echo $v['name'] ?></a></li>
+			<?php } ?>
+			</ul>
+		</div>
+
+		<h2 class="title wow flipOutX" id="tit"><?php echo $cate_tit['name']; ?></h2>
+		<ul class="location">
+			<li>当前位置：</li>
+			<li><a href="index.html">首页</a><font>&gt;</font></li>
+			<li class="current"><a href="about.html">公司介绍</a></li>
+		</ul>
+
+		<div class="text wow lightSpeedIn">
+		<?php foreach($about as $vo){ ?>
+			<img src="<?php echo UPLOAD.$vo['image1'];?>" width="600px" height="300px"><img src="<?php echo UPLOAD.$vo['image2'];?>"  width="600px" height="300px">
+			<?php echo htmlspecialchars_decode($vo['content']);?>
+		<?php } ?>
+		</div>

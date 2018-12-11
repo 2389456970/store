@@ -1,0 +1,47 @@
+<div class="top">
+			<div class="title">
+				<h4>新闻中心</h4>
+				<h5>NEWS CENTER</h5></div>
+			<ul class="menu">
+				<?php foreach($news_menu as $v) { ?>
+				<li class="current"><a href="index.php?m=home&ctl=news&cate_id=<?php echo $v['id'] ?>#tit"><?php echo $v['name']?></a></li>
+				
+				<?php } ?>
+			</ul>
+		</div>
+
+		<h2 class="title" id="tit"><?php echo $cate_tit['name'] ?></h2>
+		<ul class="location">
+			<li>当前位置：</li>
+			<li><a href="index.html">首页</a><font>&gt;</font></li>
+			<li class="current"><a href="news.html">新闻中心</a></li>
+		</ul>
+
+		<ul class="news_main" >
+			<?php foreach($news as $vo){?>
+			<li>
+				<a href="news_details.html" class="news_pic"><img src="upload/<?php echo $vo['image1'] ?>"></a>
+				<div class="date">
+					<p><?php echo date("d",$vo['time']); ?></p><font><?php echo date("Y/m",$vo['time']); ?></font></div>
+				<div class="text">
+					<h4 class="title"><a href="news_details.html"><?php echo $vo['title']; ?></a></h4>
+					<?php echo htmlspecialchars_decode($vo['content']); ?>
+				</div>
+				<a href="news_details.html" class="details">查看详情</a>
+			</li>
+			<?php } ?>
+		</ul>
+		<ul class="page">
+			<li class="pre">
+				<a href="index.php?m=home&ctl=<?php echo $ctl ?>&page=<?php echo $prev ?>#tit"><img src="<?php echo HOME ?>images/news_page_left.png"></a>
+			</li>
+			 
+			<?php for($i=1;$i<$page_total;$i++){ ?>
+				<li <?php echo $i == $page ? 'class="current"' :'' ?>><a href="index.php?m=home&ctl=<?php echo $ctl ?>&page=<?php echo $i ?>#tit"><?php echo $i ?></a></li>
+			<?php } ?>
+
+			<li class="next">
+				<a href="index.php?m=home&ctl=<?php echo $ctl ?>&page=<?php echo $next ?>#tit"><img src="<?php echo HOME ?>images/news_page_right.png"></a>
+			</li>
+		</ul>
+	</div>

@@ -1,0 +1,37 @@
+<div class="top">
+			<div class="title wow bounceIn">
+				<h4>产品中心</h4>
+				<h5>PRODUCT CENTER</h5></div>
+			<ul class="menu">
+			<?php foreach($product_menu as $v) { ?>
+				<li <?php echo $pid == $v['id'] ? 'class="current"':''; ?>><a href="index.php?m=home&ctl=product&cate_id=<?php echo $v['id'] ?>#tit"><?php echo $v['name'] ?></a></li>
+			<?php } ?>
+			</ul>
+		</div>
+		<h2 class="title wow fadeInDown" id="tit"><?php echo $cate_tit['name']; ?></h2>
+		<ul class="location">
+			<li>当前位置：</li>
+			<li><a href="index.html">首页</a>&gt;</li>
+			<li class="current"><a href="product.html">产品中心</a></li>
+		</ul>
+		<ul class="pro_list wow bounce">
+		<?php foreach($product as $vo){ ?>
+			<li>
+				<a href="javascript:;" class="pro_pic"><img style="width: 376px;height: 313px;" src="<?php echo UPLOAD.$vo['image'];?>"></a>
+				<h5 class="title"><a href="javascript:;"><?php echo $vo['title'];?></a></h5>
+				<p><?php echo htmlspecialchars_decode($vo['content']);?></p>
+				<a href="javascript:;" class="details">查看详情</a>
+			</li>
+		<?php } ?>
+		</ul>
+		<ul class="page">
+			<li class="pre" >
+				<a href="index.php?m=home&ctl=<?php echo $ctl?>&page=<?php echo $prev ?>#tit"><img src="<?php echo HOME ?>images/news_page_left.png"></a>
+			</li>
+			<?php for($i=1;$i<$page_total+1;$i++){ ?>
+				<li <?php echo $i == $page ? 'class="current"' : '';?>><a href="index.php?m=home&ctl=<?php echo $ctl?>&page=<?php echo $i ?>#tit"><?php echo $i ?></a></li>
+			<?php } ?>
+			<li class="next">
+				<a href="index.php?m=home&ctl=<?php echo $ctl?>&page=<?php echo $next ?>#tit"><img src="<?php echo HOME ?>images/news_page_right.png"></a>
+			</li>
+		</ul>

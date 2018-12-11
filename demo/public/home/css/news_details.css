@@ -1,0 +1,30 @@
+@charset "utf-8";
+.top:after{ content:""; width:100%; height:0px; font-size:0px; display:block; clear:both;}
+.top {width:1200px; margin:0px auto;}
+.top .title h4 {font-family:"微软雅黑"; font-size:30px; color:#FFF; font-weight:normal; line-height: 30px;
+ text-align:center;}
+.top .title h5 {font-family:"微软雅黑"; font-size:20px; color:#FFF; font-weight:normal; line-height: 20px;
+margin-top: 15px; text-align:center;}
+.top .title{background:#ffbb29; width:350px; padding:28px 0px 29px; float:left;}
+.top .menu{float:left; width:846px; border:2px solid #ffbb29;}
+.top .menu:after{ content:""; width:100%; height:0px; font-size:0px; display:block; clear:both;}
+.top .menu li{float:left; width:25%; text-align:center; cursor:pointer; padding:28px 0px 26px;border-bottom:2px solid #FFF;}
+.top .menu li a{ line-height:60px; font-family:"微软雅黑"; font-size:24px; color:#333333; display:inline-block;}
+.top .menu li:hover a{ border-bottom:2px solid #333333;}
+.top .menu li.current a{ border-bottom:2px solid #333333;}
+ h2.title{margin: 58px auto 40px;text-align: center; font-family: "微软雅黑";font-size:24px; color:#333333; font-weight:normal;line-height:24px;}
+.location{ width:1200px; margin:0px auto 8px;}
+.location:after{ content:""; width:100%; height:0px; font-size:0px; display:block; clear:both;}
+.location li{float:left; font-family: "微软雅黑";font-size:14px; color:#333333; line-height:14px;}
+.location li a{display:inline-block; font-family: "微软雅黑";font-size:14px; color:#333333;line-height:14px;}
+.location li.current a{color: #d59918;}
+.location li:hover a{color: #d59918;}
+.text{margin:0px auto; width:1126px; padding:45px 37px 0px; border-top: 2px solid #ffbb29;}
+.text:after{content:""; width:100%; height:0px; font-size:0px; display:block; clear:both;}
+.text .title{font-family: "微软雅黑";font-size:18x; color:#333333; font-weight:normal;line-height:18px; text-align:center; margin-bottom:30px;}
+.text p{text-indent:2em; font-family:"微软雅黑";font-size:14px; color:#333333;line-height:34px;}
+.text img{margin-top:42px;}
+.text .pre,.text .next{ width:142px;font-family:"微软雅黑"; font-size:24px; color:#333333;line-height:48px; border:1px solid #333333; text-align:center; margin-top:63px; margin-bottom:82px;}
+.text .pre:hover,.text .next:hover{color:#fff; border-color:#fff; background:#fead00;}
+.text .next{float:right;}
+.text .pre{float:left;}

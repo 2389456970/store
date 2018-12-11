@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>首页</title>
+		<link rel="stylesheet" type="text/css" href="<?php echo HOME ?>css/common.css" />
+		<link rel="stylesheet" type="text/css" href="<?php echo HOME ?>css/<?php echo $ctl ?>.css" />
+		<script language="javascript" type="text/javascript" src="<?php echo HOME ?>js/jquery-1.8.3.min.js"></script>
+		<!--[if lt IE 9]>
+<script language="javascript" type="text/javascript" src="./js/html5shiv.js"></script>
+<script language="javascript" type="text/javascript" src="./js/IE9.js"></script>
+<style>
+.header .nav li a{behavior:url(PIE.htc);}
+</style>
+<![endif]-->
+	</head>
+
+	<body>
+		<div class="header">
+			<a href="index.html" class="logo"><img src="<?php echo HOME ?>images/logo_03.gif"></a>
+			<ul class="nav">
+				<!-- <li class="current"><a href="index.html">首&nbsp;&nbsp;页</a></li> -->
+				<?php foreach($menu as $v){ ?><li <?php echo ('ctl='.$ctl) == $v['url_path'] ? 'class="current"':'';?>><a href="index.php?m=home&<?php echo $v['url_path'] ?>"><?php echo  $v['name'] ?></a></li>
+				<?php } ?>
+			
+			</ul>
+		</div>
+		<?php if($ctl == 'index'){ ?>
+		<div class="banner">
+			<ul class="banner_pic_list">
+				<li>
+					<a href="javascript:void(0)"><img src="<?php echo HOME ?>images/banner_1.jpg"></a>
+				</li>
+				<li>
+					<a href="javascript:void(0)"><img src="<?php echo HOME ?>images/banner_2.jpg"></a>
+				</li>
+				<li>
+					<a href="javascript:void(0)"><img src="<?php echo HOME ?>images/banner_3.jpg"></a>
+				</li>
+			</ul>
+			<a href="javascript:void(0)" class="left"></a>
+			<a href="javascript:void(0)" class="right"></a>
+
+			<ul class="banner_list">
+				<li class="current"></li>
+				<li></li>
+				<li></li>
+			</ul>
+        </div>
+		<?php }else{ ?>
+			<div class="banner">
+				<img src="<?php echo HOME ?>images/news_banner_02.jpg">
+			</div>
+		<?php }?>/

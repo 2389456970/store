@@ -1,0 +1,46 @@
+<h2 class="title">联系我们</h2>
+		<ul class="location">
+			<li>当前位置<font>:</font></li>
+			<li><a href="index.html">首页</a><font>&gt;</font></li>
+			<li class="current"><a href="contact.html">联系方式</a></li>
+		</ul>
+		<iframe src="index.php?m=home&ctl=map" scrolling="no" frameborder="no" class="map"></iframe>
+		<div class="bottom">
+			<ul class="tel wow fadeInLeft">
+			<?php foreach($contact as $c) { ?>
+				<li><?php echo $c['address'];?></li>
+				<li><?php echo $c['code'];?></li>
+				<li><?php echo $c['telephone'];?></li>
+				<li><?php echo $c['fax'];?></li>
+				<li><?php echo $c['mobile'];?></li>
+				<li><?php echo $c['qq'];?></li>
+				<li><?php echo $c['msn'];?></li>
+				<li><?php echo $c['e-mail'];?></li>
+			<?php } ?>
+			</ul>
+			<form class="msg wow fadeInRight" action="index.php?m=home&ctl=contact&act=feedbackpost" method="post" enctype="ultipart/form-data">
+				<ul>
+					<li>
+						<label>姓名：</label>
+						<input type="text" name="name" placeholder="请输入您的名字">
+					</li>
+					<li>
+						<label>电话：</label>
+						<input type="text" name="mobile" placeholder="请输入您的电话">
+					</li>
+					<li>
+						<label>邮箱：</label>
+						<input type="text" name="e-mail" placeholder="请输入您的邮箱">
+					</li>
+					<li>
+						<label>留言：</label>
+						<textarea name="message" placeholder="请输入您的留言"></textarea>
+					</li>
+					<li>
+						<input type="submit"  value="提交">
+						<input type="reset" value="重置">
+					</li>
+				</ul>
+			</form>
+		</div>
+		<script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script>
